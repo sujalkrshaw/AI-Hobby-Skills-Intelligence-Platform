@@ -915,13 +915,15 @@ http://localhost:8000
 
 ### Swagger API
 
-
+```text
 http://localhost:8000/docs
+```
 
 ### RustFS Console
 
+```text
 http://localhost:9001
-
+```
 
 ---
 
@@ -929,8 +931,9 @@ http://localhost:9001
 
 The backend provides:
 
+```http
 GET /health
-
+```
 
 Open:
 
@@ -940,12 +943,12 @@ http://localhost:8000/health
 
 A healthy deployment returns a response containing:
 
-
+```json
 {
   "status": "healthy",
   "database": "ok"
 }
-
+```
 
 ---
 
@@ -955,15 +958,15 @@ The backend contains automated tests using Pytest.
 
 Run:
 
-
+```bash
 docker compose exec backend pytest
-
+```
 
 ## Verified Result
 
-
+```text
 4 passed, 1 warning
-
+```
 
 The warning is a dependency deprecation warning from the Starlette/AnyIO test-client stack and does not represent a failed test.
 
@@ -973,7 +976,7 @@ The warning is a dependency deprecation warning from the Starlette/AnyIO test-cl
 
 The project was verified through the following workflow:
 
-
+```text
 Docker Build
       ↓
 Container Startup
@@ -987,11 +990,11 @@ Frontend Runtime
 Backend Health API
       ↓
 Automated Pytest Suite
-
+```
 
 Verified:
 
-
+```text
 Frontend Build       ✅
 Frontend Runtime     ✅
 FastAPI Backend      ✅
@@ -999,6 +1002,7 @@ PostgreSQL           ✅
 RustFS Storage       ✅
 Health API           ✅
 Automated Tests      ✅ 4 Passed
+```
 
 ---
 
@@ -1041,7 +1045,7 @@ The project uses environment variables for configuration.
 
 Example:
 
-
+```env
 DATABASE_URL=your_database_url
 SECRET_KEY=your_secret_key
 POSTGRES_DB=your_database
@@ -1052,7 +1056,7 @@ MINIO_ENDPOINT=your_storage_endpoint
 MINIO_ACCESS_KEY=your_access_key
 MINIO_SECRET_KEY=your_secret_key
 MINIO_BUCKET=your_bucket
-
+```
 
 Never commit production credentials, passwords, API keys, or secret tokens.
 
@@ -1064,7 +1068,7 @@ PostgreSQL stores structured application data.
 
 Conceptually:
 
-
+```text
 User
  │
  ├── Skills
@@ -1078,7 +1082,7 @@ User
  │     └── Comments
  │
  └── Profile
-
+```
 
 The relational database provides persistent storage for application entities and their relationships.
 
@@ -1088,7 +1092,7 @@ The relational database provides persistent storage for application entities and
 
 Large files are handled separately from relational application data.
 
-
+```text
 User
  │
  ▼
@@ -1105,18 +1109,20 @@ RustFS
  │
  ▼
 Object Storage
+```
 
 This follows the common cloud architecture pattern:
 
+```text
 Structured Data → Database
 Files / Media   → Object Storage
-
+```
 
 ---
 
 # 📊 Analytics Architecture
 
-
+```text
 Practice Sessions
        │
        ▼
@@ -1133,13 +1139,13 @@ Aggregation
        │
        ▼
 Dashboard
-
+```
 
 ---
 
 # 🤖 AI Architecture
 
-
+```text
 User Learning Data
        │
        ├── Skills
@@ -1157,7 +1163,7 @@ AI Service Layer
        │
        ▼
 Learning Dashboard
-
+```
 
 The AI layer is separated from the core database and API logic to keep the system modular and extensible.
 
@@ -1180,7 +1186,7 @@ The project demonstrates engineering patterns applicable to:
 
 The project combines multiple engineering domains:
 
-
+```text
 Cloud Computing
        +
 Full-Stack Development
@@ -1202,7 +1208,7 @@ Docker
 Testing
        +
 CI/CD
-
+```
 
 ---
 
@@ -1250,7 +1256,7 @@ Potential approaches:
 
 A larger community feed can evolve from database pagination toward:
 
-
+```text
 Indexed Queries
       ↓
 Pagination
@@ -1260,7 +1266,7 @@ Caching
 Background Processing
       ↓
 Distributed Feed Architecture
-
+```
 
 ---
 
@@ -1294,8 +1300,9 @@ The frontend should display an appropriate error state when the API becomes unav
 
 The project contains:
 
-
+```text
 .github/workflows/ci.yml
+```
 
 This workflow supports automated project validation through GitHub Actions.
 
@@ -1355,7 +1362,7 @@ This workflow supports automated project validation through GitHub Actions.
 
 For a project demonstration:
 
-
+```text
 1. Open Application
         ↓
 2. Login
@@ -1391,6 +1398,7 @@ For a project demonstration:
 17. Show Docker Services
         ↓
 18. Show Test Result
+```
 
 ---
 
@@ -1469,7 +1477,7 @@ This project provided practical experience in:
 
 The application requires multiple services to communicate correctly:
 
-
+```text
 React
   ↓
 FastAPI
@@ -1477,6 +1485,7 @@ FastAPI
 PostgreSQL
   +
 RustFS
+```
 
 Docker Compose provides a reproducible environment for these components.
 
@@ -1598,7 +1607,7 @@ Production deployment would require additional infrastructure configuration such
 
 Final verified local environment:
 
-
+```text
 Frontend
    ↓
 Running on localhost:5173
@@ -1618,18 +1627,20 @@ Healthy
 Automated Tests
    ↓
 4 passed, 1 warning
+```
 
 Backend health verification:
 
+```text
 status   = healthy
 database = ok
-
 ```
 
 ---
 
 # 🏷️ ATS / Technical Keywords
 
+```text
 Artificial Intelligence
 AI
 Machine Learning
@@ -1675,7 +1686,17 @@ Containerization
 DevOps
 Cloud Storage
 Database Management
-Software Engineering`
+Software Engineering
+```
+
+---
+
+# 💼 Resume Project Description
+
+You can describe this project on your resume as:
+
+> **AI Hobby & Skills Intelligence Platform** — Built a full-stack cloud-oriented learning platform using React, FastAPI, PostgreSQL, Docker, and S3-compatible object storage, implementing authentication, skill/goal management, practice tracking, analytics, AI-assisted recommendations, prediction, community posts, likes/comments, and learning-evidence uploads; validated the backend with automated Pytest tests.
+
 ---
 
 # 🎤 Interview Summary
@@ -1712,6 +1733,7 @@ The AI service layer provides learning-oriented coaching, practice prediction, p
 
 The backend was tested using Pytest and FastAPI TestClient. The final verified result was:
 
+```text
 4 passed, 1 warning
 ```
 
@@ -1719,7 +1741,7 @@ The backend was tested using Pytest and FastAPI TestClient. The final verified r
 
 # 👨‍💻 Author
 
-## Sujal kumar Shaw
+## Sujal Shaw
 
 **Electronics & Communication Engineering Student**
 
@@ -1733,7 +1755,15 @@ Areas of interest:
 - Python
 - Full-Stack Development
 - Backend Engineering
-  
+
+---
+
+# 🔗 Repository
+
+**GitHub:**
+
+https://github.com/sujalkrshaw/AI-Hobby-Skills-Intelligence-Platform
+
 ---
 
 # ⭐ Support
@@ -1750,7 +1780,7 @@ If you find the project useful:
 
 # 🚀 Project Journey
 
-
+```text
 Problem Identification
         ↓
 System Architecture
@@ -1784,6 +1814,7 @@ GitHub CI
 Documentation
         ↓
 Final GitHub Repository
+```
 
 ---
 
@@ -1792,3 +1823,4 @@ Final GitHub Repository
 **Concept → Architecture → Development → Integration → Testing → Containerization → Documentation → GitHub**
 
 > **Designed to demonstrate practical engineering rather than only isolated code examples.**
+```
