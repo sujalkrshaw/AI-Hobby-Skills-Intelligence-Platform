@@ -1,0 +1,40 @@
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+
+# Database / local storage
+*.db
+storage/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary extraction folders
+*-temp/
+*-temp
+
+# Local backups
+*-backup-*/
+*-backup-*
+
+# Local ZIP packages / generated archives
+*.zip
+
+# Logs
+*.log
