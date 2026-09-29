@@ -1756,15 +1756,7 @@ Areas of interest:
 - Full-Stack Development
 - Backend Engineering
 
----
 
-# 🔗 Repository
-
-**GitHub:**
-
-https://github.com/sujalkrshaw/AI-Hobby-Skills-Intelligence-Platform
-
----
 
 # ⭐ Support
 
