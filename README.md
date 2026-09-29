@@ -1,10 +1,3 @@
-Absolutely. 👍 Below is the **complete `README.md` in one single copy-paste block** for your GitHub repository.
-
-I’ve kept it **recruiter-friendly + ATS-friendly + technically accurate to your current implementation**. It avoids claiming technologies you haven't actually implemented.
-
-> **Use:** GitHub → `README.md` → Edit → `Ctrl+A` → paste everything below → Commit changes.
-
-```markdown
 # 🚀 AI Hobby & Skills Intelligence Platform
 
 <p align="center">
